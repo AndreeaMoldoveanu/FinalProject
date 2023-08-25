@@ -1,12 +1,11 @@
 package TestCases;
 
 import Pages.BasePage;
-import Pages.DemoShopPage;
 import Pages.SortByNamePage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class SortByNamePAgeTestCases extends BasePage {
+public class SortByNamePageTestCases extends BasePage {
     private SortByNamePage sortDropdown;
 
     @BeforeMethod

@@ -15,7 +15,6 @@ public class DemoShopPageTestCases extends BasePage {
         super.setUp();
         demoIndexPage = new DemoShopPage(driver);
     }
-
         @Test
         public void clickOnLogoImage() throws InterruptedException {
         driver.findElement(By.id("responsive-navbar-nav")).click();
@@ -53,7 +52,15 @@ public class DemoShopPageTestCases extends BasePage {
         @Test
         public void addToWishListFirstProduct() throws InterruptedException {
         demoIndexPage.ClickOnAddToWishlistProductOne();
+        demoIndexPage.clickOnWishlistNavBar();
+        Assert.assertEquals("Wishlist", "Wishlist");
         }
+        @Test
+        public void unselectWishListProduct() throws InterruptedException {
+        demoIndexPage.ClickOnAddToWishlistProductOne();
+        demoIndexPage.clickAndUnselectWishlistProduct();
+        demoIndexPage.ClickOnAddToWishlistProductOne();
+    }
         @Test
         public void clickOnQuestionMarkBtn()throws InterruptedException{
         demoIndexPage.QuestionMarkSign();

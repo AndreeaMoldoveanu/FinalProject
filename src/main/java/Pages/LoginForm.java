@@ -23,4 +23,6 @@ public class LoginForm extends BasePage {
     public void checkUserAccountAfterSignIn(){driver.findElement(userAccount).click();}
     By buyProductsUserWithBugs = By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[2]/div[1]/div/div[2]/button[1]");
     public void clickOnBuyProductsUserWithBugs(){driver.findElement(buyProductsUserWithBugs).click();}
+    By awesomeGraniteChipsProduct = By.linkText("Awesome Granite Chips");
+    public void clickAwesomeGraniteChipsProduct(){driver.findElement(awesomeGraniteChipsProduct).click();}
 }

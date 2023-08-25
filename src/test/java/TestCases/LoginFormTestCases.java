@@ -4,6 +4,7 @@ import Pages.BasePage;
 import Pages.DemoShopPage;
 import Pages.LoginForm;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -34,14 +35,17 @@ public class LoginFormTestCases extends BasePage {
         Assert.assertEquals("The user has been locked out.", "The user has been locked out.");
     }
     @Test
-    public void userWithBugs()throws InterruptedException{
+        public void userWithBugs()throws InterruptedException{
         driver.findElement(By.id("responsive-navbar-nav")).click();
         loginFormPopUp.ClickOnLoginButton();
         loginFormPopUp.enterUserName("beetle");
         loginFormPopUp.enterPassword("choochoo");
         loginFormPopUp.credentialsLogin();
+        loginFormPopUp.clickAwesomeGraniteChipsProduct();
         loginFormPopUp.clickOnBuyProductsUserWithBugs();
-    }
+        WebElement element = driver.findElement(By.xpath("/html/body/div/div/div[1]/nav/div/div[2]/span/a[1]/span"));
+        Assert.assertNotNull(element, "Cart counter element is not present.");
+        }
     @Test
     public void clickOnLoginButtonWithInvalidCredentials()throws InterruptedException {
         driver.findElement(By.id("responsive-navbar-nav")).click();

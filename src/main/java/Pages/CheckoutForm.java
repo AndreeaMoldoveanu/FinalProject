@@ -23,12 +23,14 @@ public class CheckoutForm extends BasePage {
     public void clickOnCartBtnNavBar(){driver.findElement(cartNavBar).click();}
     By clickOnCheckoutBtn = By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[3]/a[2]");
     public void checkoutBtn(){driver.findElement(clickOnCheckoutBtn).click();}
-
     By clickOnContinueCheckout = By.xpath("//*[@id=\"root\"]/div/div[2]/form/div/div[2]/button");
     public void continueCheckout(){driver.findElement(clickOnContinueCheckout).click();}
-
     By clickCompleteOrder = By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[2]/a[2]");
     public void CompleteOrderBtn(){driver.findElement(clickCompleteOrder).click();}
     By clickOnContinueShopping = By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[2]/a");
     public void ContinueShoppingBtn(){driver.findElement(clickOnContinueShopping).click();}
+    By deliveryInfoRadioBtn = By.className("form-check-input");
+    public void deliveryInfo(){driver.findElement(deliveryInfoRadioBtn).click();}
+    By paymentInfoRadioBtn = By.className("form-check");
+    public void paymentInfo(){driver.findElement(paymentInfoRadioBtn).click();}
 }
