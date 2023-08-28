@@ -11,7 +11,7 @@ public class DemoShopPage extends BasePage {
     public void clickOnCartBtnNavBar(){driver.findElement(cartNavBar).click();}
     By wishListNavBar = By.xpath("//*[@id=\"responsive-navbar-nav\"]/div[2]/span/a[2]");
     public void clickOnWishlistNavBar(){driver.findElement(wishListNavBar).click();}
-    By unselectWishList = By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[2]/div[1]/div/div[2]/button[2]/svg/path");
+    By unselectWishList = By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[2]/div[1]/div/div[2]/button[2]");
     public void clickAndUnselectWishlistProduct(){driver.findElement(unselectWishList).click();}
     By clickOnProductOne = By.xpath("/html/body/div/div/div[2]/div[2]/div[2]/div[1]/div/div[1]/a");
     public void clickOnFirstProduct(){driver.findElement(clickOnProductOne).click();}
